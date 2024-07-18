@@ -15,7 +15,9 @@
     "qs": "^6.10.3"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+       "watch": "cds watch",
+    "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "cds": {
     "requires": {
@@ -36,7 +38,14 @@
     }
   },
   "devDependencies": {
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "cds-plugin-ui5": "^0.9.3"
   },
-  "lcap": true
+  "lcap": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/project1"
+  ]
 }
